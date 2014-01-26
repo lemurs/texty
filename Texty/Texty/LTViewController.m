@@ -14,7 +14,7 @@
     UIView *view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     view.backgroundColor = [UIColor whiteColor];
 
-    static const CGFloat givenMaximumFontSize = 50.0;
+    static const CGFloat givenMaximumFontSize = 150.0;
 
     self.textViewDelegate = [[LTTextViewDelegate alloc] init];
 
