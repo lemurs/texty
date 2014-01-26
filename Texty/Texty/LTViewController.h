@@ -1,4 +1,0 @@
-
-@interface LTViewController : UIViewController
-
-@end
