@@ -6,7 +6,7 @@
 
 - (void)textViewDidChange:(UITextView *)textView;
 {
-    textView.font = [UIFont systemFontOfSize:[self.class fontSizeWithTextView:textView]];
+    textView.font = [textView.font fontWithSize:[self.class fontSizeWithTextView:textView]];
 }
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text;
@@ -23,8 +23,16 @@
 
 + (CGFloat)fontSizeWithTextView:(UITextView *)textView;
 {
-    CGFloat fontSize = givenMaximumFontSize;
-    while (CGRectGetHeight([textView.text boundingRectWithSize:CGSizeMake(CGRectGetWidth(textView.bounds), CGFLOAT_MAX)  options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:fontSize]} context:self.stringDrawingContext]) > CGRectGetHeight(textView.bounds))
+    CGSize textSize = UIEdgeInsetsInsetRect(textView.bounds, textView.textContainerInset).size;
+    __block CGFloat fontSize = givenMaximumFontSize;
+
+    NSArray *everyWord = [textView.text componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+   [everyWord enumerateObjectsUsingBlock:^(NSString *eachWord, NSUInteger stringIndex, BOOL *stop) {
+        while ([eachWord sizeWithAttributes:@{NSFontAttributeName: [textView.font fontWithSize:fontSize]}].width > textSize.width)
+            fontSize--;
+    }];
+
+    while ([textView.text sizeWithAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:fontSize]}].height > textSize.height)
         fontSize--;
 
     return floor(fontSize);

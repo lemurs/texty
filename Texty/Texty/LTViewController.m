@@ -23,7 +23,7 @@
     textView.text = NSLocalizedString(@"Hello, Lemurs!", @"Traditional greeting");
     textView.textAlignment = NSTextAlignmentCenter;
 
-    textView.font = [UIFont systemFontOfSize:[self.textViewDelegate.class fontSizeWithTextView:textView]];
+    textView.font = [textView.font fontWithSize:[self.textViewDelegate.class fontSizeWithTextView:textView]];
 
     [view addSubview:textView];
 
