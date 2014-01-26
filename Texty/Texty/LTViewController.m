@@ -23,7 +23,7 @@
     textView.delegate = self.textViewDelegate;
     textView.font = [UIFont systemFontOfSize:givenMaximumFontSize];
     textView.returnKeyType = UIReturnKeyDone;
-    textView.text = NSLocalizedString(@"Hello, World!", @"Traditional greeting");
+    textView.text = NSLocalizedString(@"Hello, Lemurs!", @"Traditional greeting");
     textView.textAlignment = NSTextAlignmentCenter;
     [view addSubview:textView];
 
