@@ -20,6 +20,7 @@
 		D87FAD2118957E5400391EAD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D87FAD0018957E5300391EAD /* UIKit.framework */; };
 		D87FAD2918957E5400391EAD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D87FAD2718957E5400391EAD /* InfoPlist.strings */; };
 		D87FAD2B18957E5400391EAD /* TextyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D87FAD2A18957E5400391EAD /* TextyTests.m */; };
+		D87FADBB1895C0B000391EAD /* LTTextViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D87FADBA1895C0B000391EAD /* LTTextViewDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		D87FAD2618957E5400391EAD /* TextyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TextyTests-Info.plist"; sourceTree = "<group>"; };
 		D87FAD2818957E5400391EAD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D87FAD2A18957E5400391EAD /* TextyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextyTests.m; sourceTree = "<group>"; };
+		D87FADB91895C0B000391EAD /* LTTextViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTTextViewDelegate.h; sourceTree = "<group>"; };
+		D87FADBA1895C0B000391EAD /* LTTextViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTTextViewDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,8 @@
 			children = (
 				D87FAD0B18957E5300391EAD /* LTAppDelegate.h */,
 				D87FAD0C18957E5300391EAD /* LTAppDelegate.m */,
+				D87FADB91895C0B000391EAD /* LTTextViewDelegate.h */,
+				D87FADBA1895C0B000391EAD /* LTTextViewDelegate.m */,
 				D87FAD1418957E5400391EAD /* LTViewController.h */,
 				D87FAD1518957E5400391EAD /* LTViewController.m */,
 				D87FAD1718957E5400391EAD /* Images.xcassets */,
@@ -248,6 +253,7 @@
 			files = (
 				D87FAD0D18957E5300391EAD /* LTAppDelegate.m in Sources */,
 				D87FAD0918957E5300391EAD /* main.m in Sources */,
+				D87FADBB1895C0B000391EAD /* LTTextViewDelegate.m in Sources */,
 				D87FAD1618957E5400391EAD /* LTViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,6 +457,7 @@
 				D87FAD3018957E5400391EAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D87FAD3118957E5400391EAD /* Build configuration list for PBXNativeTarget "TextyTests" */ = {
 			isa = XCConfigurationList;
@@ -459,6 +466,7 @@
 				D87FAD3318957E5400391EAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
