@@ -13,8 +13,6 @@
 		D87FAD0718957E5300391EAD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D87FAD0518957E5300391EAD /* InfoPlist.strings */; };
 		D87FAD0918957E5300391EAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D87FAD0818957E5300391EAD /* main.m */; };
 		D87FAD0D18957E5300391EAD /* LTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D87FAD0C18957E5300391EAD /* LTAppDelegate.m */; };
-		D87FAD1018957E5300391EAD /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D87FAD0E18957E5300391EAD /* Main_iPhone.storyboard */; };
-		D87FAD1318957E5300391EAD /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D87FAD1118957E5300391EAD /* Main_iPad.storyboard */; };
 		D87FAD1618957E5400391EAD /* LTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87FAD1518957E5400391EAD /* LTViewController.m */; };
 		D87FAD1818957E5400391EAD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D87FAD1718957E5400391EAD /* Images.xcassets */; };
 		D87FAD1F18957E5400391EAD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D87FAD1E18957E5400391EAD /* XCTest.framework */; };
@@ -45,8 +43,6 @@
 		D87FAD0A18957E5300391EAD /* Texty-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Texty-Prefix.pch"; sourceTree = "<group>"; };
 		D87FAD0B18957E5300391EAD /* LTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTAppDelegate.h; sourceTree = "<group>"; };
 		D87FAD0C18957E5300391EAD /* LTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTAppDelegate.m; sourceTree = "<group>"; };
-		D87FAD0F18957E5300391EAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		D87FAD1218957E5300391EAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		D87FAD1418957E5400391EAD /* LTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTViewController.h; sourceTree = "<group>"; };
 		D87FAD1518957E5400391EAD /* LTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTViewController.m; sourceTree = "<group>"; };
 		D87FAD1718957E5400391EAD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -116,8 +112,6 @@
 			children = (
 				D87FAD0B18957E5300391EAD /* LTAppDelegate.h */,
 				D87FAD0C18957E5300391EAD /* LTAppDelegate.m */,
-				D87FAD0E18957E5300391EAD /* Main_iPhone.storyboard */,
-				D87FAD1118957E5300391EAD /* Main_iPad.storyboard */,
 				D87FAD1418957E5400391EAD /* LTViewController.h */,
 				D87FAD1518957E5400391EAD /* LTViewController.m */,
 				D87FAD1718957E5400391EAD /* Images.xcassets */,
@@ -232,9 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D87FAD1318957E5300391EAD /* Main_iPad.storyboard in Resources */,
 				D87FAD1818957E5400391EAD /* Images.xcassets in Resources */,
-				D87FAD1018957E5300391EAD /* Main_iPhone.storyboard in Resources */,
 				D87FAD0718957E5300391EAD /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,22 +277,6 @@
 				D87FAD0618957E5300391EAD /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		D87FAD0E18957E5300391EAD /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D87FAD0F18957E5300391EAD /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		D87FAD1118957E5300391EAD /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D87FAD1218957E5300391EAD /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		D87FAD2718957E5400391EAD /* InfoPlist.strings */ = {

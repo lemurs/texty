@@ -8,11 +8,11 @@
 
 #pragma mark - UIViewController
 
-- (void)viewDidLoad;
+- (void)loadView;
 {
-    [super viewDidLoad];
-
-    
+    UIView *view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    view.backgroundColor = [UIColor whiteColor];
+    self.view = view;
 }
 
 @end
