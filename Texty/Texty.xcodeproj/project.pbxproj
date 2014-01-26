@@ -23,6 +23,7 @@
 		D87FADA31895AABD00391EAD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D87FAD7F1895AABC00391EAD /* UIKit.framework */; };
 		D87FADAB1895AABD00391EAD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D87FADA91895AABD00391EAD /* InfoPlist.strings */; };
 		D87FADAD1895AABD00391EAD /* TextyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D87FADAC1895AABD00391EAD /* TextyTests.m */; };
+		D87FADB81895B85100391EAD /* LTTextViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D87FADB71895B85100391EAD /* LTTextViewDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		D87FADA81895AABD00391EAD /* TextyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TextyTests-Info.plist"; sourceTree = "<group>"; };
 		D87FADAA1895AABD00391EAD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D87FADAC1895AABD00391EAD /* TextyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextyTests.m; sourceTree = "<group>"; };
+		D87FADB61895B85100391EAD /* LTTextViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTTextViewDelegate.h; sourceTree = "<group>"; };
+		D87FADB71895B85100391EAD /* LTTextViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTTextViewDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 				D87FAD941895AABD00391EAD /* LTMainViewController.m */,
 				D87FAD961895AABD00391EAD /* LTSettingsViewController.h */,
 				D87FAD971895AABD00391EAD /* LTSettingsViewController.m */,
+				D87FADB61895B85100391EAD /* LTTextViewDelegate.h */,
+				D87FADB71895B85100391EAD /* LTTextViewDelegate.m */,
 				D87FAD991895AABD00391EAD /* Images.xcassets */,
 				D87FAD821895AABC00391EAD /* Supporting Files */,
 			);
@@ -262,6 +267,7 @@
 				D87FAD981895AABD00391EAD /* LTSettingsViewController.m in Sources */,
 				D87FAD8C1895AABC00391EAD /* LTAppDelegate.m in Sources */,
 				D87FAD951895AABD00391EAD /* LTMainViewController.m in Sources */,
+				D87FADB81895B85100391EAD /* LTTextViewDelegate.m in Sources */,
 				D87FAD881895AABC00391EAD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
