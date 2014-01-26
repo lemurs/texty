@@ -23,7 +23,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                 <connections>
-                                    <outlet property="delegate" destination="rQl-PL-IFJ" id="RE8-cY-iNj"/>
+                                    <outlet property="delegate" destination="JMg-ft-226" id="1kn-v3-1Kp"/>
                                 </connections>
                             </textView>
                             <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqg-sy-dxO">
@@ -56,6 +56,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4L-l5-tyG" sceneMemberID="firstResponder"/>
+                <customObject id="JMg-ft-226" customClass="LTTextViewDelegate"/>
             </objects>
             <point key="canvasLocation" x="-51" y="182"/>
         </scene>
