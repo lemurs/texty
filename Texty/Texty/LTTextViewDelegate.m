@@ -20,3 +20,5 @@
 }
 
 @end
+
+const CGFloat givenMaximumFontSize = 150.0;
