@@ -19,10 +19,12 @@
     UITextView *textView = [[UITextView alloc] initWithFrame:view.bounds textContainer:nil];
     textView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
     textView.delegate = self.textViewDelegate;
-    textView.font = [UIFont systemFontOfSize:givenMaximumFontSize];
     textView.returnKeyType = UIReturnKeyDone;
     textView.text = NSLocalizedString(@"Hello, Lemurs!", @"Traditional greeting");
     textView.textAlignment = NSTextAlignmentCenter;
+
+    textView.font = [UIFont systemFontOfSize:[self.textViewDelegate.class fontSizeWithTextView:textView]];
+
     [view addSubview:textView];
 
     self.view = view;

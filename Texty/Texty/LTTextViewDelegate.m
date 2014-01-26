@@ -6,7 +6,7 @@
 
 - (void)textViewDidChange:(UITextView *)textView;
 {
-    // TODO: Make sure textView.text fits textView.bounds
+    textView.font = [UIFont systemFontOfSize:[self.class fontSizeWithTextView:textView]];
 }
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text;
@@ -17,6 +17,23 @@
     [textView resignFirstResponder];
 
     return NO;
+}
+
+#pragma mark - API
+
++ (CGFloat)fontSizeWithTextView:(UITextView *)textView;
+{
+    CGFloat fontSize = givenMaximumFontSize;
+    while (CGRectGetHeight([textView.text boundingRectWithSize:CGSizeMake(CGRectGetWidth(textView.bounds), CGFLOAT_MAX)  options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:fontSize]} context:self.stringDrawingContext]) > CGRectGetHeight(textView.bounds))
+        fontSize--;
+
+    return floor(fontSize);
+}
+
++ (NSStringDrawingContext *)stringDrawingContext;
+{
+    static NSStringDrawingContext *stringDrawingContext;
+    return stringDrawingContext ? : (stringDrawingContext = [[NSStringDrawingContext alloc] init]);
 }
 
 @end
