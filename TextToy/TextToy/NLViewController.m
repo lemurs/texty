@@ -15,6 +15,17 @@ static const CGFloat fudge = 5.0;
 {
     [super viewDidLoad];
 
+    NSArray *defaultColors = @[
+        [UIColor colorWithRed:38.0f/255.0f green:98.0f/255.0f blue:165.0f/255.0f alpha:1.0f],
+        [UIColor colorWithRed:114.0f/255.0f green:167.0f/255.0f blue:225.0f/255.0f alpha:1.0f],
+        [UIColor colorWithRed:139.0f/255.0f green:185.0f/255.0f blue:237.0f/255.0f alpha:1.0f],
+        [UIColor colorWithRed:255.0f/255.0f green:255.0f/255.0f blue:255.0f/255.0f alpha:1.0f],
+        [UIColor colorWithRed:131.0f/255.0f green:179.0f/255.0f blue:233.0f/255.0f alpha:1.0f],
+        [UIColor colorWithRed:114.0f/255.0f green:167.0f/255.0f blue:225.0f/255.0f alpha:1.0f],
+        [UIColor colorWithRed:38.0f/255.0f green:98.0f/255.0f blue:165.0f/255.0f alpha:1.0f],
+        [UIColor colorWithRed:38.0f/255.0f green:98.0f/255.0f blue:165.0f/255.0f alpha:1.0f]];
+    [self.class.colors addObjectsFromArray:defaultColors];
+
     self.textView.layoutManager.usesFontLeading = NO;
     [self.textView.delegate textViewDidChange:self.textView];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -27,21 +38,34 @@ static const CGFloat fudge = 5.0;
 }
 
 
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
+{
+    return self.class.colors.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(self.class)] ? : [[UITableViewCell alloc] init];
+
+    if (indexPath.row < self.class.colors.count)
+        cell.backgroundColor = self.class.colors[indexPath.row];
+
+    return cell;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    return YES;
+}
+
+#pragma mark - UITableViewDelegate
+
 #pragma mark - UITextViewDelegate
 
 - (void)textViewDidChange:(UITextView *)textView;
 {
-    static NSArray *colors = nil;
-    if (!colors)
-        colors = @[[UIColor colorWithRed:38.0f/255.0f green:98.0f/255.0f blue:165.0f/255.0f alpha:1.0f],
-                   [UIColor colorWithRed:114.0f/255.0f green:167.0f/255.0f blue:225.0f/255.0f alpha:1.0f],
-                   [UIColor colorWithRed:139.0f/255.0f green:185.0f/255.0f blue:237.0f/255.0f alpha:1.0f],
-                   [UIColor colorWithRed:255.0f/255.0f green:255.0f/255.0f blue:255.0f/255.0f alpha:1.0f],
-                   [UIColor colorWithRed:131.0f/255.0f green:179.0f/255.0f blue:233.0f/255.0f alpha:1.0f],
-                   [UIColor colorWithRed:114.0f/255.0f green:167.0f/255.0f blue:225.0f/255.0f alpha:1.0f],
-                   [UIColor colorWithRed:38.0f/255.0f green:98.0f/255.0f blue:165.0f/255.0f alpha:1.0f],
-                   [UIColor colorWithRed:38.0f/255.0f green:98.0f/255.0f blue:165.0f/255.0f alpha:1.0f]];
-
     CGFloat fontSize = [self.class fontSizeWithTextView:textView];
     textView.font = [textView.font fontWithSize:fontSize];
 
@@ -49,7 +73,7 @@ static const CGFloat fudge = 5.0;
     textFrame.size.width -= 2 * fudge;
     textFrame.origin.x += fudge;
 
-    UIImage *image = [self.class imageWithAttributedText:textView.attributedText textFrame:textFrame colors:colors];
+    UIImage *image = [self.class imageWithAttributedText:textView.attributedText textFrame:textFrame colors:self.class.colors];
     self.imageView.image = image;
 
     NSLog(@"Font is now %@", textView.font);
@@ -67,6 +91,12 @@ static const CGFloat fudge = 5.0;
 
 
 #pragma mark - API
+
++ (NSMutableArray *)colors;
+{
+    static NSMutableArray *colors;
+    return colors ? : (colors = [NSMutableArray array]);
+}
 
 + (CGFloat)fontSizeWithTextView:(UITextView *)textView;
 {

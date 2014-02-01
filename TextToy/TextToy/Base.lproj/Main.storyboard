@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" text="Hello, Lemurs!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9V6-wM-oYn">
-                                <rect key="frame" x="144" y="20" width="480" height="320"/>
+                                <rect key="frame" x="90" y="20" width="480" height="320"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -42,7 +42,7 @@
                                 </connections>
                             </button>
                             <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bHc-vL-w4m">
-                                <rect key="frame" x="144" y="20" width="480" height="320"/>
+                                <rect key="frame" x="90" y="20" width="480" height="320"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -50,12 +50,21 @@
                                     <constraint firstAttribute="height" constant="320" id="JAa-6R-B9d"/>
                                 </constraints>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="a40-a2-3WB">
+                                <rect key="frame" x="703" y="20" width="65" height="320"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="fhE-QJ-Kz1"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="52E-n8-82J"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="bHc-vL-w4m" secondAttribute="trailing" constant="144" id="1TA-0P-fVD"/>
-                            <constraint firstItem="9V6-wM-oYn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" priority="500" constant="144" id="GTg-VP-YML"/>
-                            <constraint firstItem="bHc-vL-w4m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="144" id="KgK-4P-flJ"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bHc-vL-w4m" secondAttribute="trailing" priority="500" constant="144" id="1TA-0P-fVD"/>
+                            <constraint firstItem="9V6-wM-oYn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" priority="500" constant="90" id="GTg-VP-YML"/>
+                            <constraint firstItem="bHc-vL-w4m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="90" id="KgK-4P-flJ"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9V6-wM-oYn" secondAttribute="trailing" priority="500" constant="144" id="ZO4-oi-eVO"/>
                             <constraint firstItem="bHc-vL-w4m" firstAttribute="top" secondItem="7aO-Mf-Y8h" secondAttribute="bottom" id="tb1-gh-jDy"/>
                             <constraint firstItem="9V6-wM-oYn" firstAttribute="top" secondItem="7aO-Mf-Y8h" secondAttribute="bottom" id="uMH-BV-L5b"/>
