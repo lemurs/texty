@@ -75,8 +75,6 @@ static const CGFloat fudge = 5.0;
 
     UIImage *image = [self.class imageWithAttributedText:textView.attributedText textFrame:textFrame colors:self.class.colors];
     self.imageView.image = image;
-
-    NSLog(@"Font is now %@", textView.font);
 }
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text;
